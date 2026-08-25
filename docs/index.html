@@ -314,6 +314,73 @@
             border-color: var(--indigo);
         }
 
+        
+        .btn-demo-nav {
+            background: rgba(129, 140, 248, 0.12);
+            border: 1px solid rgba(129, 140, 248, 0.3);
+            color: var(--indigo) !important;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-demo-nav:hover {
+            background: rgba(129, 140, 248, 0.22);
+            border-color: var(--indigo);
+            transform: translateY(-1px);
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 36px;
+            flex-wrap: wrap;
+        }
+
+        .btn-demo-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(34, 211, 238, 0.15) 0%, rgba(129, 140, 248, 0.15) 50%, rgba(168, 85, 247, 0.15) 100%);
+            border: 1px solid rgba(129, 140, 248, 0.4);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 20px -5px rgba(129, 140, 248, 0.3);
+            transition: all 0.25s;
+        }
+
+        .btn-demo-hero:hover {
+            background: linear-gradient(135deg, rgba(34, 211, 238, 0.25) 0%, rgba(129, 140, 248, 0.25) 50%, rgba(168, 85, 247, 0.25) 100%);
+            border-color: var(--cyan);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px -4px rgba(34, 211, 238, 0.4);
+        }
+
+        .demo-card {
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.3s;
+        }
+
+        .demo-card:hover {
+            border-color: rgba(34, 211, 238, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 45px -10px rgba(34, 211, 238, 0.15);
+        }
+
         /* Interactive Demo Audit Card */
         .demo-card {
             width: 100%;
@@ -532,6 +599,7 @@
                 <span>OKYVA</span>
             </a>
             <div class="nav-links">
+                <a href="demo.html" target="_blank" class="btn-demo-nav">⚡ Live Demo</a>
                 <a href="#matrix">Matrix</a>
                 <a href="#features">Features</a>
                 <a href="https://github.com/DevRedious/zokyva" target="_blank" class="btn-github">
@@ -550,6 +618,12 @@
             </div>
             <h1>Audit Any Brand, Neologism<br>or SaaS in <span class="gradient-text">&lt;2.5 Seconds</span></h1>
             <p>Scan Certificate Transparency logs, DNS records, developer package namespaces, social media handles, and legal databases in a single lightning-fast command.</p>
+
+            <div class="hero-actions">
+                <a href="demo.html" target="_blank" class="btn-demo-hero">
+                    <span>⚡ View Real Audit Report Demo (.html) ↗</span>
+                </a>
+            </div>
 
             <!-- Terminal Install Widget -->
             <div class="term-box">
@@ -578,7 +652,7 @@
             </div>
 
             <!-- Live Audit Preview -->
-            <div class="demo-card">
+            <a href="demo.html" target="_blank" class="demo-card">
                 <div class="demo-top">
                     <div>
                         <strong style="font-size: 1.05rem;">Live Clearance Audit : ZOKYVA</strong>
@@ -612,7 +686,7 @@
                         <span class="tag-virgin">Available</span>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
