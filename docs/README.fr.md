@@ -87,16 +87,9 @@ Déposer ou lancer une marque, un projet SaaS ou un néologisme exige une vérif
 * Nobara / Fedora / Ubuntu / Debian / macOS
 * Python 3.10 ou supérieur
 
-### Option A : Installation Globale via Bun / NPM (Direct depuis GitHub)
+### Option A : Installation Globale via Bun (Recommandé & Ultra-rapide)
 ```bash
-# Via Bun (Ultra-rapide)
 bun add -g https://github.com/DevRedious/zokyva
-
-# Via NPM
-npm install -g DevRedious/zokyva
-
-# Ou exécution directe sans installation
-bunx https://github.com/DevRedious/zokyva --deep <mot>
 ```
 
 ### Option B : Installation Directe en 1 ligne (Curl)
