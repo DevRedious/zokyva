@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zokyva"
+version = "4.0.0"
+description = "360° Brand Uniqueness & Virginity Scanner"
+readme = "README.md"
+authors = [{ name = "DevRedious (Morgan)", email = "contact@redious.fr" }]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+zokyva = "zokyva:main"
+
+[project.urls]
+Homepage = "https://github.com/DevRedious/zokyva"
+BugTracker = "https://github.com/DevRedious/zokyva/issues"

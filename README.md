@@ -91,16 +91,30 @@ Validating a new brand, SaaS product, or coined neologism requires far more than
 * Linux (Nobara, Fedora, Ubuntu, Debian, Arch...) / macOS
 * Python 3.10 or higher
 
-### Local Setup
+### Option A: Install Globally via Bun / NPM (Direct from GitHub)
 ```bash
-# 1. Make executable
-chmod +x /path/to/zokyva/zokyva
+# Via Bun (Fastest)
+bun add -g https://github.com/DevRedious/zokyva
 
-# 2. Symlink into your user PATH
-ln -sf /path/to/zokyva/zokyva ~/.local/bin/zokyva
+# Via NPM
+npm install -g DevRedious/zokyva
 
-# 3. Verify installation
-zokyva --help
+# Or run instantly without installing
+bunx https://github.com/DevRedious/zokyva --deep <keyword>
+```
+
+### Option B: Standalone Curl Install
+```bash
+curl -fsSL https://raw.githubusercontent.com/DevRedious/zokyva/main/zokyva -o ~/.local/bin/zokyva
+chmod +x ~/.local/bin/zokyva
+```
+
+### Option C: Local Symlink (from source)
+```bash
+git clone https://github.com/DevRedious/zokyva.git
+cd zokyva
+chmod +x zokyva
+ln -sf $(pwd)/zokyva ~/.local/bin/zokyva
 ```
 
 ---

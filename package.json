@@ -1,0 +1,48 @@
+{
+  "name": "zokyva",
+  "version": "4.0.0",
+  "description": "360\u00b0 Brand Uniqueness & Virginity Scanner \u2014 Certificate Transparency, DNS, Developer Namespaces, Social Handles & Legal Registries in a single command.",
+  "main": "bin/zokyva.js",
+  "bin": {
+    "zokyva": "bin/zokyva.js"
+  },
+  "scripts": {
+    "start": "node bin/zokyva.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevRedious/zokyva.git"
+  },
+  "keywords": [
+    "security",
+    "branding",
+    "domain-scanner",
+    "certificate-transparency",
+    "osint",
+    "trademark",
+    "cli",
+    "tui",
+    "i18n",
+    "whois",
+    "naming",
+    "startup"
+  ],
+  "author": "DevRedious (Morgan) <https://github.com/DevRedious>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevRedious/zokyva/issues"
+  },
+  "homepage": "https://github.com/DevRedious/zokyva#readme",
+  "files": [
+    "zokyva",
+    "bin/zokyva.js",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "assets/",
+    "docs/"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

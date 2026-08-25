@@ -87,16 +87,30 @@ Déposer ou lancer une marque, un projet SaaS ou un néologisme exige une vérif
 * Nobara / Fedora / Ubuntu / Debian / macOS
 * Python 3.10 ou supérieur
 
-### Installation Locale
+### Option A : Installation Globale via Bun / NPM (Direct depuis GitHub)
 ```bash
-# 1. Rendre le script exécutable
-chmod +x /home/dev_redious/Documents/Dev/scripts/zokyva/zokyva
+# Via Bun (Ultra-rapide)
+bun add -g https://github.com/DevRedious/zokyva
 
-# 2. Créer le lien symbolique dans le PATH utilisateur
-ln -sf /home/dev_redious/Documents/Dev/scripts/zokyva/zokyva ~/.local/bin/zokyva
+# Via NPM
+npm install -g DevRedious/zokyva
 
-# 3. Vérifier l'installation
-zokyva --help
+# Ou exécution directe sans installation
+bunx https://github.com/DevRedious/zokyva --deep <mot>
+```
+
+### Option B : Installation Directe en 1 ligne (Curl)
+```bash
+curl -fsSL https://raw.githubusercontent.com/DevRedious/zokyva/main/zokyva -o ~/.local/bin/zokyva
+chmod +x ~/.local/bin/zokyva
+```
+
+### Option C : Lien Symbolique Local (depuis les sources)
+```bash
+git clone https://github.com/DevRedious/zokyva.git
+cd zokyva
+chmod +x zokyva
+ln -sf $(pwd)/zokyva ~/.local/bin/zokyva
 ```
 
 ---
