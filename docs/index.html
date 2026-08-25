@@ -82,29 +82,32 @@
         }
 
         .brand {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 3px;
+            gap: 2px;
             text-decoration: none;
             color: white;
-            font-weight: 800;
-            font-size: 1.35rem;
-            letter-spacing: 0.5px;
+            line-height: 1;
         }
 
         .brand svg {
-            width: 28px;
-            height: 28px;
+            height: 22px;
+            width: 22px;
             flex-shrink: 0;
+            display: inline-block;
             vertical-align: middle;
         }
 
         .brand span {
+            font-size: 1.32rem;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: 0.8px;
             background: var(--gradient-zokyva);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-weight: 800;
-            letter-spacing: 1px;
+            display: inline-block;
+            transform: translateY(0.5px);
         }
 
         .nav-links {
