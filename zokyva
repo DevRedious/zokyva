@@ -1133,7 +1133,7 @@ def export_audit_dossier(summary: Dict[str, Any], lang: Optional[str] = None) ->
     
     # 1. Export Markdown (.md) - STRICTEMENT SANS AUCUN EMOJI
     md_filename = f"AUDIT-MARQUE-{kw}-{date_str}.md"
-    md_path = LOCAL_AUDITS_DIR / md_filename
+    md_path = get_audits_dir() / md_filename
     
     inpi_link = "https://bases-marques.inpi.fr/"
     tmview_link = f"https://www.tmdn.org/tmview/#/tmview/results?page=1&pageSize=30&criteria=C&basicSearch={urllib.parse.quote(summary['keyword'])}"
@@ -1258,7 +1258,7 @@ Certified audit archived locally in `~/.local/share/zokyva/logs/`.
 
     # 2. Export HTML Dark Mode (.html) - AVEC ICÔNES VECTORIELLES SVG & SANS AUCUN EMOJI
     html_filename = f"AUDIT-MARQUE-{kw}-{date_str}.html"
-    html_path = LOCAL_AUDITS_DIR / html_filename
+    html_path = get_audits_dir() / html_filename
     html_content = build_dark_html_report(summary, lang=lang)
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html_content)
@@ -1515,13 +1515,13 @@ def view_history_menu():
 
     print(f"{GRAY}{'─' * 70}{RESET}")
     print(f"Dossier des logs complets : {CYAN}{LOGS_DIR}{RESET}")
-    print(f"Dossier des dossiers d'audit : {CYAN}{LOCAL_AUDITS_DIR}{RESET}")
+    print(f"Dossier des dossiers d'audit : {CYAN}{get_audits_dir()}{RESET}")
     input(f"\n{DIM}Appuyez sur Entrée pour continuer...{RESET}")
 
 def interactive_menu():
     init_storage()
     while True:
-        os.system("clear")
+        os.system("cls" if os.name == "nt" else "clear")
         print_banner()
         log_count = len(list(LOGS_DIR.glob("*.json"))) if LOGS_DIR.exists() else 0
         agents_ok = sum(1 for p in AGENT_SKILL_PATHS.values() if p.exists())
