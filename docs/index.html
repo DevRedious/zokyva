@@ -248,6 +248,8 @@
             text-align: left;
             display: flex;
             flex-direction: column;
+            min-width: 0;
+            box-sizing: border-box;
         }
 
         .terminal-bar {
@@ -332,6 +334,7 @@
 
         .terminal-form {
             flex: 1;
+            min-width: 0;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -339,6 +342,7 @@
 
         .terminal-input {
             flex: 1;
+            min-width: 0;
             background: transparent;
             border: none;
             outline: none;
@@ -440,24 +444,38 @@
         .t-dim { color: #64748b; }
         .t-bold { font-weight: 700; }
 
+        .terminal-table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            margin: 12px 0;
+            -webkit-overflow-scrolling: touch;
+        }
+
         .terminal-table {
             width: 100%;
+            min-width: 520px;
             border-collapse: collapse;
-            margin: 12px 0;
             font-family: var(--font-mono);
             font-size: 0.82rem;
         }
 
         .terminal-table th {
             text-align: left;
-            padding: 4px 10px;
+            padding: 5px 10px;
             color: #94a3b8;
             border-bottom: 1px solid #1e293b;
+            white-space: nowrap;
         }
 
         .terminal-table td {
-            padding: 4px 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+            padding: 5px 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            white-space: nowrap;
+        }
+
+        .term-break {
+            word-break: break-word;
+            overflow-wrap: anywhere;
         }
 
         /* 28 Points Matrix Section */
@@ -851,7 +869,7 @@
             const suffixes = ["app", "hq", "lab", "hub", "flow", "cloud", "stack", "ify", "ly"];
             
             let html = `<div class="t-bold t-cyan">COINED BRAND VARIATIONS FOR: '${root}'</div><br>`;
-            html += `<table class="terminal-table"><thead><tr><th>VARIATION</th><th>TLD</th><th>STATUS</th></tr></thead><tbody>`;
+            html += `<div class="terminal-table-wrap"><table class="terminal-table"><thead><tr><th>VARIATION</th><th>TLD</th><th>STATUS</th></tr></thead><tbody>`;
 
             for (const p of prefixes.slice(0, 3)) {
                 html += `<tr><td>${p}${root}</td><td>.com</td><td class="t-green">100% VIRGIN & FREE</td></tr>`;
@@ -859,7 +877,7 @@
             for (const s of suffixes.slice(0, 4)) {
                 html += `<tr><td>${root}${s}</td><td>.com</td><td class="t-green">100% VIRGIN & FREE</td></tr>`;
             }
-            html += `</tbody></table>`;
+            html += `</tbody></table></div>`;
             html += `<br><div class="t-dim">Run 'zokyva --deep &lt;variation&gt;' to audit any coined name.</div>`;
             outEl.innerHTML = html;
         }
@@ -948,19 +966,21 @@
             outEl.innerHTML = `
                 <div class="t-cyan t-bold">BRAND ANALYSIS : ${kw.toUpperCase()} [360° TOTAL AUDIT] (${totalPoints} points audited in ${elapsed}s)</div>
                 <br>
-                <table class="terminal-table">
-                    <thead>
-                        <tr>
-                            <th>DOMAIN</th>
-                            <th>DOMAIN STATUS</th>
-                            <th>CT LOGS</th>
-                            <th>DNS RESOLUTION</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${tableRows}
-                    </tbody>
-                </table>
+                <div class="terminal-table-wrap">
+                    <table class="terminal-table">
+                        <thead>
+                            <tr>
+                                <th>DOMAIN</th>
+                                <th>DOMAIN STATUS</th>
+                                <th>CT LOGS</th>
+                                <th>DNS RESOLUTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${tableRows}
+                        </tbody>
+                    </table>
+                </div>
 
                 <div class="t-bold t-purple">1. DEVELOPER PACKAGES & CODE :</div>
                 <div>  • npm (JS/TS)           : ${npmStatus}</div>
