@@ -7,7 +7,7 @@
 
   <p align="center">
     <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python 3.10+">
-    <img src="https://img.shields.io/badge/Version-v4.0.0-8B5CF6" alt="Version 4.0.0">
+    <a href="https://github.com/DevRedious/zokyva/releases/latest"><img src="https://img.shields.io/github/v/release/DevRedious/zokyva?color=8B5CF6&label=Release" alt="Latest Release"></a>
     <img src="https://img.shields.io/badge/Dependencies-Standard_Library_Only-10B981" alt="Zero 3rd-party dependencies">
     <img src="https://img.shields.io/badge/Scan-%3C2.5s_multi--threaded-06B6D4" alt="Scan under 2.5 seconds">
     <img src="https://img.shields.io/badge/i18n-English_%7C_Fran%C3%A7ais-F59E0B" alt="i18n Bilingual">
