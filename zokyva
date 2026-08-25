@@ -1123,10 +1123,10 @@ def build_dark_html_report(summary: Dict[str, Any], lang: Optional[str] = None) 
             <table>
                 <thead>
                     <tr>
-                        <th>Domaine</th>
-                        <th>Statut Global</th>
-                        <th>Historique Certificats (CT)</th>
-                        <th>Résolution DNS</th>
+                        <th>{t['th_domain']}</th>
+                        <th>{t['th_status']}</th>
+                        <th>{t['th_ct']}</th>
+                        <th>{t['th_dns']}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1135,21 +1135,21 @@ def build_dark_html_report(summary: Dict[str, Any], lang: Optional[str] = None) 
             </table>
         </div>
 
-        <div class="section-title">{ICONS_SVG['package']} 2. Packages Développeur & Namespaces Open-Source</div>
+        <div class="section-title">{ICONS_SVG['package']} {t['html_sec_2']}</div>
         <div class="card">
             <div class="grid-2">
                 {dev_html}
             </div>
         </div>
 
-        <div class="section-title">{ICONS_SVG['social']} 3. Identifiants & Pseudos Réseaux Sociaux (Handles)</div>
+        <div class="section-title">{ICONS_SVG['social']} {t['html_sec_3']}</div>
         <div class="card">
             <div class="grid-2">
                 {social_html}
             </div>
         </div>
 
-        <div class="section-title">{ICONS_SVG['building']} 4. Registre des Sociétés & Archives Web</div>
+        <div class="section-title">{ICONS_SVG['building']} {t['html_sec_4']}</div>
         <div class="card">
             <div class="grid-2">
                 {legal_html}
