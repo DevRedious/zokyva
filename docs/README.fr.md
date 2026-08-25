@@ -7,6 +7,7 @@
 
   <p align="center">
     <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python 3.10+">
+    <img src="https://img.shields.io/badge/OS-Linux_%7C_macOS_%7C_Windows-informational" alt="Multi-Plateforme">
     <a href="https://github.com/DevRedious/zokyva/releases/latest"><img src="https://img.shields.io/github/v/release/DevRedious/zokyva?color=8B5CF6&label=Release" alt="Latest Release"></a>
     <img src="https://img.shields.io/badge/D%C3%A9pendances-Stdlib%20uniquement-10B981" alt="Aucune dépendance tierce">
     <img src="https://img.shields.io/badge/Scan-%3C2.5s%20multi--thread-06B6D4" alt="Scan sous 2,5 secondes">
@@ -84,7 +85,7 @@ Déposer ou lancer une marque, un projet SaaS ou un néologisme exige une vérif
 ## <img src="../assets/icons/box.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Installation & Démarrage Rapide
 
 ### Prérequis
-* Nobara / Fedora / Ubuntu / Debian / macOS
+* Linux (Nobara, Fedora, Ubuntu, Debian, Arch...) / macOS / Windows 10 & 11 (PowerShell, CMD, WSL)
 * Python 3.10 ou supérieur
 
 ### Option A : Installation Globale via Bun (Recommandé & Ultra-rapide)

@@ -7,6 +7,7 @@
 
   <p align="center">
     <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python 3.10+">
+    <img src="https://img.shields.io/badge/OS-Linux_%7C_macOS_%7C_Windows-informational" alt="Cross-Platform">
     <a href="https://github.com/DevRedious/zokyva/releases/latest"><img src="https://img.shields.io/github/v/release/DevRedious/zokyva?color=8B5CF6&label=Release" alt="Latest Release"></a>
     <img src="https://img.shields.io/badge/Dependencies-Standard_Library_Only-10B981" alt="Zero 3rd-party dependencies">
     <img src="https://img.shields.io/badge/Scan-%3C2.5s_multi--threaded-06B6D4" alt="Scan under 2.5 seconds">
@@ -88,7 +89,7 @@ Validating a new brand, SaaS product, or coined neologism requires far more than
 ## <img src="assets/icons/box.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Installation & Quickstart
 
 ### Prerequisites
-* Linux (Nobara, Fedora, Ubuntu, Debian, Arch...) / macOS
+* Linux (Nobara, Fedora, Ubuntu, Debian, Arch...) / macOS / Windows 10 & 11 (PowerShell, CMD, WSL)
 * Python 3.10 or higher
 
 ### Option A: Install Globally via Bun (Recommended & Ultra-Fast)
