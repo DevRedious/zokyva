@@ -425,15 +425,38 @@
         }
 
         /* Terminal Screen Output */
+        
+        /* Sleek Modern Dark Scrollbar */
+        .terminal-screen::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .terminal-screen::-webkit-scrollbar-track {
+            background: #060911;
+            border-radius: 4px;
+        }
+        .terminal-screen::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .terminal-screen::-webkit-scrollbar-thumb:hover {
+            background: var(--indigo);
+        }
         .terminal-screen {
-            padding: 16px 18px;
+            scrollbar-width: thin;
+            scrollbar-color: #1e293b #060911;
+        }
+
+        .terminal-screen {
+            padding: 18px 22px;
             min-height: 280px;
-            max-height: 520px;
+            max-height: 540px;
             overflow-y: auto;
             overflow-x: hidden !important;
             font-family: var(--font-mono);
-            font-size: 0.84rem;
-            line-height: 1.5;
+            font-size: clamp(0.75rem, 1.25vw, 0.84rem);
+            line-height: 1.55;
             color: #e2e8f0;
             background: #060911;
             width: 100%;
