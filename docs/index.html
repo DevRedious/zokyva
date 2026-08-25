@@ -250,6 +250,7 @@
             flex-direction: column;
             min-width: 0;
             box-sizing: border-box;
+            contain: paint;
         }
 
         .terminal-bar {
@@ -259,11 +260,13 @@
             align-items: center;
             justify-content: space-between;
             border-bottom: 1px solid var(--border-card);
+            min-width: 0;
         }
 
         .term-dots {
             display: flex;
             gap: 6px;
+            flex-shrink: 0;
         }
 
         .term-dot {
@@ -281,12 +284,16 @@
             font-size: 0.8rem;
             color: var(--text-muted);
             font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .terminal-actions {
             display: flex;
             align-items: center;
             gap: 8px;
+            flex-shrink: 0;
         }
 
         .btn-term-clear {
@@ -309,13 +316,17 @@
         /* Terminal Input Line */
         .terminal-input-bar {
             background: #0b0f1a;
-            padding: 12px 18px;
+            padding: 10px 14px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             font-family: var(--font-mono);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            min-width: 0;
+            width: 100%;
+            box-sizing: border-box;
+            flex-wrap: wrap;
         }
 
         .term-prompt-host {
@@ -333,11 +344,11 @@
         }
 
         .terminal-form {
-            flex: 1;
+            flex: 1 1 200px;
             min-width: 0;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .terminal-input {
@@ -348,9 +359,10 @@
             outline: none;
             color: #f8fafc;
             font-family: var(--font-mono);
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-weight: 600;
             caret-color: #22d3ee;
+            padding: 4px 0;
         }
 
         .terminal-input::placeholder {
@@ -372,6 +384,7 @@
             gap: 5px;
             transition: all 0.2s;
             white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .btn-run-scan:hover {
@@ -381,26 +394,28 @@
 
         /* Terminal Presets */
         .terminal-presets {
-            padding: 8px 18px;
+            padding: 8px 14px;
             background: rgba(255, 255, 255, 0.015);
             border-bottom: 1px solid rgba(255, 255, 255, 0.04);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
-            font-size: 0.76rem;
+            font-size: 0.74rem;
             color: var(--text-muted);
+            min-width: 0;
         }
 
         .preset-badge {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border-card);
             color: var(--text-secondary);
-            padding: 2px 8px;
+            padding: 2px 7px;
             border-radius: 4px;
             cursor: pointer;
             font-family: var(--font-mono);
             transition: all 0.2s;
+            white-space: nowrap;
         }
 
         .preset-badge:hover {
@@ -411,15 +426,27 @@
 
         /* Terminal Screen Output */
         .terminal-screen {
-            padding: 20px;
+            padding: 16px 18px;
             min-height: 280px;
             max-height: 520px;
             overflow-y: auto;
+            overflow-x: hidden;
             font-family: var(--font-mono);
-            font-size: 0.85rem;
+            font-size: 0.84rem;
             line-height: 1.5;
             color: #e2e8f0;
             background: #060911;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            word-break: break-word;
+            overflow-wrap: anywhere;
+        }
+
+        .term-divider {
+            border: none;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            margin: 12px 0;
         }
 
         .t-green { color: #10b981; font-weight: 600; }
@@ -998,7 +1025,7 @@
                 <div class="t-bold">360° Global Uniqueness Score : <span class="${isUltraPure ? 't-green' : 't-yellow'}">${score}%</span> (${virginCount}/${totalPoints} virgin points)</div>
                 <div>Verdict : ${verdictHtml}</div>
                 <br>
-                <div class="t-dim">----------------------------------------------------------------------</div>
+                <hr class="term-divider">
                 <div><a href="demo.html" target="_blank" style="color:#38bdf8; text-decoration:underline;">[View Full Glassmorphic HTML Dossier ↗]</a></div>
             `;
         }
