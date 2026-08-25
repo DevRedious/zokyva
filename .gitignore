@@ -1,0 +1,19 @@
+# Generated audits & exports
+audits/*.html
+audits/*.md
+!audits/.gitkeep
+
+# Python cache & logs
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local data cache
+.cache/
