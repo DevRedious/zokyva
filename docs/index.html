@@ -430,7 +430,7 @@
             min-height: 280px;
             max-height: 520px;
             overflow-y: auto;
-            overflow-x: hidden;
+            overflow-x: hidden !important;
             font-family: var(--font-mono);
             font-size: 0.84rem;
             line-height: 1.5;
@@ -896,7 +896,7 @@
             const suffixes = ["app", "hq", "lab", "hub", "flow", "cloud", "stack", "ify", "ly"];
             
             let html = `<div class="t-bold t-cyan">COINED BRAND VARIATIONS FOR: '${root}'</div><br>`;
-            html += `<div class="terminal-table-wrap"><table class="terminal-table"><thead><tr><th>VARIATION</th><th>TLD</th><th>STATUS</th></tr></thead><tbody>`;
+            html += `<div class="terminal-table-wrap"><table class="terminal-table"><thead><tr><th style="width:40%">VARIATION</th><th style="width:20%">TLD</th><th style="width:40%">STATUS</th></tr></thead><tbody>`;
 
             for (const p of prefixes.slice(0, 3)) {
                 html += `<tr><td>${p}${root}</td><td>.com</td><td class="t-green">100% VIRGIN & FREE</td></tr>`;
@@ -997,10 +997,10 @@
                     <table class="terminal-table">
                         <thead>
                             <tr>
-                                <th>DOMAIN</th>
-                                <th>DOMAIN STATUS</th>
-                                <th>CT LOGS</th>
-                                <th>DNS RESOLUTION</th>
+                                <th class="col-dom">DOMAIN</th>
+                                <th class="col-stat">STATUS</th>
+                                <th class="col-ct">CT LOGS</th>
+                                <th class="col-dns">DNS</th>
                             </tr>
                         </thead>
                         <tbody>
