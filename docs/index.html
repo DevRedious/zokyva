@@ -666,7 +666,45 @@
         footer a:hover {
             color: white;
         }
-    </style>
+    
+/* --- Responsive : supprime tout scroll horizontal sous 640px --- */
+@media (max-width: 640px) {
+  /* le tableau de resultats devient une liste de fiches : plus rien a faire defiler */
+  .terminal-table-wrap { overflow-x: visible; margin: 10px 0; }
+  .terminal-table { min-width: 0; width: 100%; display: block; font-size: 0.78rem; }
+  .terminal-table thead { display: none; }
+  .terminal-table tbody, .terminal-table tr, .terminal-table td { display: block; width: auto; }
+  .terminal-table tr {
+    border: 1px solid rgba(129, 140, 248, 0.18);
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin: 0 0 8px;
+  }
+  .terminal-table td {
+    border: none;
+    padding: 3px 0;
+    overflow-wrap: anywhere;
+  }
+  /* libelle au-dessus de la valeur : aucune largeur imposee, donc rien a faire defiler */
+  .terminal-table td::before {
+    display: block;
+    color: #64748b;
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
+  }
+  .tt-audit td:nth-child(1)::before { content: "DOMAIN"; }
+  .tt-audit td:nth-child(2)::before { content: "STATUS"; }
+  .tt-audit td:nth-child(3)::before { content: "CT LOGS"; }
+  .tt-audit td:nth-child(4)::before { content: "DNS"; }
+  .tt-suggest td:nth-child(1)::before { content: "VARIATION"; }
+  .tt-suggest td:nth-child(2)::before { content: "TLD"; }
+  .tt-suggest td:nth-child(3)::before { content: "STATUS"; }
+
+  /* le titre de la barre ne pousse plus la fenetre */
+  .terminal-bar { min-width: 0; }
+  .terminal-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+}
+</style>
 </head>
 <body>
 
@@ -919,7 +957,7 @@
             const suffixes = ["app", "hq", "lab", "hub", "flow", "cloud", "stack", "ify", "ly"];
             
             let html = `<div class="t-bold t-cyan">COINED BRAND VARIATIONS FOR: '${root}'</div><br>`;
-            html += `<div class="terminal-table-wrap"><table class="terminal-table"><thead><tr><th style="width:40%">VARIATION</th><th style="width:20%">TLD</th><th style="width:40%">STATUS</th></tr></thead><tbody>`;
+            html += `<div class="terminal-table-wrap"><table class="terminal-table tt-suggest"><thead><tr><th style="width:40%">VARIATION</th><th style="width:20%">TLD</th><th style="width:40%">STATUS</th></tr></thead><tbody>`;
 
             for (const p of prefixes.slice(0, 3)) {
                 html += `<tr><td>${p}${root}</td><td>.com</td><td class="t-green">100% VIRGIN & FREE</td></tr>`;
@@ -1017,7 +1055,7 @@
                 <div class="t-cyan t-bold">BRAND ANALYSIS : ${kw.toUpperCase()} [360° TOTAL AUDIT] (${totalPoints} points audited in ${elapsed}s)</div>
                 <br>
                 <div class="terminal-table-wrap">
-                    <table class="terminal-table">
+                    <table class="terminal-table tt-audit">
                         <thead>
                             <tr>
                                 <th class="col-dom">DOMAIN</th>
