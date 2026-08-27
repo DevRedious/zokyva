@@ -30,7 +30,7 @@
 
 ---
 
-## <img src="../assets/icons/list-ul.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Sommaire
+## <img src="../assets/icons/list-ul.svg" width="24" align="absbottom" alt=""> Sommaire
 - [Pourquoi ZOKYVA ?](#sec-pourquoi-zokyva)
 - [Les 28 Points d'Audit 360°](#sec-les-28-points-d-audit-360)
 - [Fonctionnalités Clés](#sec-fonctionnalites-cles)
@@ -44,7 +44,7 @@
 ---
 
 <a id="sec-pourquoi-zokyva"></a>
-## <img src="../assets/icons/target.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Pourquoi ZOKYVA ?
+## <img src="../assets/icons/target.svg" width="24" align="absbottom" alt=""> Pourquoi ZOKYVA ?
 
 Déposer ou lancer une marque, un projet SaaS ou un néologisme exige une vérification qui dépasse le simple `.com`. **ZOKYVA** interroge en parallèle et en temps réel l'ensemble de l'écosystème numérique, technique, social et juridique pour calculer un **Score d'Unicité Globale 360° (0-100%)**.
 
@@ -53,7 +53,7 @@ Déposer ou lancer une marque, un projet SaaS ou un néologisme exige une vérif
 ---
 
 <a id="sec-les-28-points-d-audit-360"></a>
-## <img src="../assets/icons/magnifier.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Les 28 Points d'Audit 360°
+## <img src="../assets/icons/magnifier.svg" width="24" align="absbottom" alt=""> Les 28 Points d'Audit 360°
 
 | Catégorie | Cibles & Points Audités | Méthode & Source |
 | :--- | :--- | :--- |
@@ -67,7 +67,7 @@ Déposer ou lancer une marque, un projet SaaS ou un néologisme exige une vérif
 ---
 
 <a id="sec-fonctionnalites-cles"></a>
-## <img src="../assets/icons/sparkles.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Fonctionnalités Clés
+## <img src="../assets/icons/sparkles.svg" width="24" align="absbottom" alt=""> Fonctionnalités Clés
 
 - **Multi-Threading Ultrarapide** : Audit simultané des 28 points en moins de 2.5 secondes via `ThreadPoolExecutor`.
 - **Indicateur de Chargement Fluide (Spinner)** : Feedback visuel en direct pendant l'analyse dans le terminal.
@@ -82,7 +82,7 @@ Déposer ou lancer une marque, un projet SaaS ou un néologisme exige une vérif
 ---
 
 <a id="sec-installation-demarrage-rapide"></a>
-## <img src="../assets/icons/box.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Installation & Démarrage Rapide
+## <img src="../assets/icons/box.svg" width="24" align="absbottom" alt=""> Installation & Démarrage Rapide
 
 ### Prérequis
 * Linux (Nobara, Fedora, Ubuntu, Debian, Arch...) / macOS / Windows 10 & 11 (PowerShell, CMD, WSL)
@@ -110,7 +110,7 @@ ln -sf $(pwd)/zokyva ~/.local/bin/zokyva
 ---
 
 <a id="sec-modes-d-utilisation"></a>
-## <img src="../assets/icons/rocket.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Modes d'Utilisation
+## <img src="../assets/icons/rocket.svg" width="24" align="absbottom" alt=""> Modes d'Utilisation
 
 ### 1. Menu Interactif (TUI)
 Lancez simplement `zokyva` sans argument pour ouvrir le menu interactif avec recherche, suggestions, historique et vidage de cache :
@@ -152,7 +152,7 @@ zokyva --clean
 ---
 
 <a id="sec-exports-rapports"></a>
-## <img src="../assets/icons/file-arrow-down.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Exports & Rapports
+## <img src="../assets/icons/file-arrow-down.svg" width="24" align="absbottom" alt=""> Exports & Rapports
 
 Les rapports sont sauvegardés dans `~/Documents/Dev/scripts/zokyva/audits/` :
 
@@ -171,11 +171,11 @@ Les rapports sont sauvegardés dans `~/Documents/Dev/scripts/zokyva/audits/` :
 ---
 
 <a id="sec-pack-branding-logos-officiels"></a>
-## <img src="../assets/icons/palette.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Pack Branding & Logos Officiels
+## <img src="../assets/icons/palette.svg" width="24" align="absbottom" alt=""> Pack Branding & Logos Officiels
 
 Le dossier [`assets/`](../assets/) regroupe la charte graphique complète de ZOKYVA (1024×1024 et 256×256) :
 
-### <img src="../assets/icons/diamond.svg" width="20" align="middle" style="vertical-align:middle" alt=""> Identité ZOKYVA (Suite Vectorielle Pure Officielle)
+### <img src="../assets/icons/diamond.svg" width="20" align="absbottom" alt=""> Identité ZOKYVA (Suite Vectorielle Pure Officielle)
 | Variante | Format PNG | Format SVG | Utilisation Recommandée |
 | :--- | :--- | :--- | :--- |
 | **Emblème Gradient Cyan / Violet** | [`z-gradient.png`](../assets/branding/z-gradient.png) | [`z-gradient.svg`](../assets/branding/z-gradient.svg) | Logo officiel, README, rapports web |
@@ -183,7 +183,7 @@ Le dossier [`assets/`](../assets/) regroupe la charte graphique complète de ZOK
 | **Monochrome Noir (Light Mode / Print)** | [`z-black.png`](../assets/branding/z-black.png) | [`z-black.svg`](../assets/branding/z-black.svg) | Impression papier, fonds clairs, PDF |
 | **Tracé Vectoriel Brut** | — | [`z.svg`](../assets/branding/z.svg) | Intégration SVG inline & animations |
 
-### <img src="../assets/icons/boxes-3.svg" width="20" align="middle" style="vertical-align:middle" alt=""> Logos Tiers & Registres Officiels
+### <img src="../assets/icons/boxes-3.svg" width="20" align="absbottom" alt=""> Logos Tiers & Registres Officiels
 
 * <img src="https://cdn.simpleicons.org/pypi/3775A9/4B8BBE" width="14" alt=""> **PyPI** : Crayonné isométrique officiel 3D avec cubes bleu, jaune et lavande (`../assets/third-party/pypi.svg`).
 * <img src="https://cdn.simpleicons.org/rust/E33B26/FF6B4A" width="14" alt=""> **Crates.io** : Cartons Rust isométriques 3D sur palette en bois (`../assets/third-party/crates-io.png`).
@@ -201,7 +201,7 @@ Le dossier [`assets/`](../assets/) regroupe la charte graphique complète de ZOK
 ---
 
 <a id="sec-architecture-performance"></a>
-## <img src="../assets/icons/cpu.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Architecture & Performance
+## <img src="../assets/icons/cpu.svg" width="24" align="absbottom" alt=""> Architecture & Performance
 
 ```text
 zokyva/
@@ -223,7 +223,7 @@ zokyva/
 ---
 
 <a id="sec-integration-multi-agents-skills"></a>
-## <img src="../assets/icons/face-robot.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Intégration Multi-Agents (Skills)
+## <img src="../assets/icons/face-robot.svg" width="24" align="absbottom" alt=""> Intégration Multi-Agents (Skills)
 
 Zokyva est équipé d'une compétence agentique universelle (`SKILL.md`) synchronisée automatiquement avec :
 - **Antigravity / Codex** : `~/.agents/skills/zokyva/SKILL.md`

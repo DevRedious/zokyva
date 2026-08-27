@@ -32,7 +32,7 @@
 
 ---
 
-## <img src="assets/icons/list-ul.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Table of Contents
+## <img src="assets/icons/list-ul.svg" width="24" align="absbottom" alt=""> Table of Contents
 - [Why ZOKYVA?](#sec-why-zokyva)
 - [The 28 Audit Points Matrix](#sec-the-28-audit-points-matrix)
 - [Key Features](#sec-key-features)
@@ -47,7 +47,7 @@
 ---
 
 <a id="sec-why-zokyva"></a>
-## <img src="assets/icons/target.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Why ZOKYVA?
+## <img src="assets/icons/target.svg" width="24" align="absbottom" alt=""> Why ZOKYVA?
 
 Validating a new brand, SaaS product, or coined neologism requires far more than just checking if `.com` is available. **ZOKYVA** queries the entire technical, digital, social, and legal landscape in parallel to calculate an authoritative **360° Global Uniqueness Score (0–100%)**.
 
@@ -56,7 +56,7 @@ Validating a new brand, SaaS product, or coined neologism requires far more than
 ---
 
 <a id="sec-the-28-audit-points-matrix"></a>
-## <img src="assets/icons/magnifier.svg" width="24" align="middle" style="vertical-align:middle" alt=""> The 28 Audit Points Matrix
+## <img src="assets/icons/magnifier.svg" width="24" align="absbottom" alt=""> The 28 Audit Points Matrix
 
 | Category | Targets & Checked Surfaces | Method & Source |
 | :--- | :--- | :--- |
@@ -70,23 +70,23 @@ Validating a new brand, SaaS product, or coined neologism requires far more than
 ---
 
 <a id="sec-key-features"></a>
-## <img src="assets/icons/sparkles.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Key Features
+## <img src="assets/icons/sparkles.svg" width="24" align="absbottom" alt=""> Key Features
 
-- ⚡ **Ultra-Fast Multi-Threading**: Audits all 28 verification points in under 2.5 seconds via Python's native `ThreadPoolExecutor`.
-- 🌐 **Built-in Bilingual Engine (i18n)**: Automatically detects system locale (English for worldwide users, French for francophone systems) with explicit `--lang en` / `--lang fr` overrides.
-- 📦 **Zero External Dependencies**: 100% pure Python standard library (`urllib`, `socket`, `json`, `concurrent.futures`, `ssl`). Runs everywhere immediately.
-- 🔄 **Smooth Terminal Spinner**: Real-time visual feedback while scanning.
-- 💾 **Smart Local Cache (15 min TTL)**: Prevents network spam and accelerates re-audits (`~/.local/share/zokyva/cache.json`).
-- 📄 **Dual Professional Export Formats**:
+- **Ultra-Fast Multi-Threading**: Audits all 28 verification points in under 2.5 seconds via Python's native `ThreadPoolExecutor`.
+- **Built-in Bilingual Engine (i18n)**: Automatically detects system locale (English for worldwide users, French for francophone systems) with explicit `--lang en` / `--lang fr` overrides.
+- **Zero External Dependencies**: 100% pure Python standard library (`urllib`, `socket`, `json`, `concurrent.futures`, `ssl`). Runs everywhere immediately.
+- **Smooth Terminal Spinner**: Real-time visual feedback while scanning.
+- **Smart Local Cache (15 min TTL)**: Prevents network spam and accelerates re-audits (`~/.local/share/zokyva/cache.json`).
+- **Dual Professional Export Formats**:
   - **Markdown (`.md`)**: Clean, corporate, zero-emoji, ready for GitHub docs & Notion.
   - **HTML Dark Pro (`.html`)**: Glassmorphic dark theme, multi-colored vector SVG brand icons, and one-click Print / PDF export.
-- 🌐 **Standardized Web Title**: Browser tab title formatted as `ZOKYVA | BRAND | DATE`.
-- 💡 **Neologism Generator (`--suggest`)**: Instantly creates and tests available `.com` brand variations using curated prefixes and suffixes.
+- **Standardized Web Title**: Browser tab title formatted as `ZOKYVA | BRAND | DATE`.
+- **Neologism Generator (`--suggest`)**: Instantly creates and tests available `.com` brand variations using curated prefixes and suffixes.
 
 ---
 
 <a id="sec-installation-quickstart"></a>
-## <img src="assets/icons/box.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Installation & Quickstart
+## <img src="assets/icons/box.svg" width="24" align="absbottom" alt=""> Installation & Quickstart
 
 ### Prerequisites
 * Linux (Nobara, Fedora, Ubuntu, Debian, Arch...) / macOS / Windows 10 & 11 (PowerShell, CMD, WSL)
@@ -114,7 +114,7 @@ ln -sf $(pwd)/zokyva ~/.local/bin/zokyva
 ---
 
 <a id="sec-usage-modes-cli"></a>
-## <img src="assets/icons/rocket.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Usage Modes & CLI
+## <img src="assets/icons/rocket.svg" width="24" align="absbottom" alt=""> Usage Modes & CLI
 
 ### 1. Interactive Menu (TUI)
 Run `zokyva` without arguments to launch the interactive dashboard with instant search, suggestions, language switch, and cache controls:
@@ -159,7 +159,7 @@ zokyva --clean
 ---
 
 <a id="sec-exports-reports"></a>
-## <img src="assets/icons/file-arrow-down.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Exports & Reports
+## <img src="assets/icons/file-arrow-down.svg" width="24" align="absbottom" alt=""> Exports & Reports
 
 Generated audit dossiers are saved in `audits/`:
 
@@ -178,11 +178,11 @@ Generated audit dossiers are saved in `audits/`:
 ---
 
 <a id="sec-official-branding-kit"></a>
-## <img src="assets/icons/palette.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Official Branding Kit
+## <img src="assets/icons/palette.svg" width="24" align="absbottom" alt=""> Official Branding Kit
 
 All high-fidelity vector assets are organized in [`assets/`](assets/):
 
-### <img src="assets/icons/diamond.svg" width="20" align="middle" style="vertical-align:middle" alt=""> ZOKYVA Identity Suite ([`assets/branding/`](assets/branding/))
+### <img src="assets/icons/diamond.svg" width="20" align="absbottom" alt=""> ZOKYVA Identity Suite ([`assets/branding/`](assets/branding/))
 | Variant | PNG Format | SVG Vector | Recommended Usage |
 | :--- | :--- | :--- | :--- |
 | **Official Cyan / Violet Gradient** | [`z-gradient.png`](assets/branding/z-gradient.png) | [`z-gradient.svg`](assets/branding/z-gradient.svg) | Official logo, README header, HTML reports |
@@ -190,7 +190,7 @@ All high-fidelity vector assets are organized in [`assets/`](assets/):
 | **Monochrome Black (Light / Print)** | [`z-black.png`](assets/branding/z-black.png) | [`z-black.svg`](assets/branding/z-black.svg) | Paper printing, light backgrounds, clean PDF |
 | **Raw Vector Geometry** | — | [`z.svg`](assets/branding/z.svg) | Inline SVG integrations & custom shaders |
 
-### <img src="assets/icons/boxes-3.svg" width="20" align="middle" style="vertical-align:middle" alt=""> Third-Party Registry Logos ([`assets/third-party/`](assets/third-party/))
+### <img src="assets/icons/boxes-3.svg" width="20" align="absbottom" alt=""> Third-Party Registry Logos ([`assets/third-party/`](assets/third-party/))
 * <img src="https://cdn.simpleicons.org/pypi/3775A9/4B8BBE" width="14" alt=""> **PyPI** : Official isometric 3D block with blue, yellow, and lavender cubes (`assets/third-party/pypi.svg`).
 * <img src="https://cdn.simpleicons.org/rust/E33B26/FF6B4A" width="14" alt=""> **Crates.io** : Official 3D Rust wooden pallet cargo boxes (`assets/third-party/crates-io.png`).
 * <img src="https://cdn.simpleicons.org/tiktok/000000/FFFFFF" width="14" alt=""> **TikTok** : Official black note `#000000` with cyan `#26f4ee` & magenta `#fb2c53` chromatic glitch (`assets/third-party/tiktok.svg`).
@@ -206,7 +206,7 @@ All high-fidelity vector assets are organized in [`assets/`](assets/):
 ---
 
 <a id="sec-architecture-performance"></a>
-## <img src="assets/icons/cpu.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Architecture & Performance
+## <img src="assets/icons/cpu.svg" width="24" align="absbottom" alt=""> Architecture & Performance
 
 ```text
 zokyva/
@@ -233,7 +233,7 @@ zokyva/
 ---
 
 <a id="sec-multi-agent-integration-skills"></a>
-## <img src="assets/icons/face-robot.svg" width="24" align="middle" style="vertical-align:middle" alt=""> Multi-Agent Integration (Skills)
+## <img src="assets/icons/face-robot.svg" width="24" align="absbottom" alt=""> Multi-Agent Integration (Skills)
 
 ZOKYVA comes equipped with a universal AI Agent Skill definition ([`SKILL.md`](SKILL.md)) synchronized across:
 - **Antigravity / Codex**: `~/.agents/skills/zokyva/SKILL.md`
@@ -244,6 +244,6 @@ AI agents can autonomously invoke ZOKYVA to validate brand names, product launch
 ---
 
 <a id="sec-license"></a>
-## <img src="assets/icons/box.svg" width="24" align="middle" style="vertical-align:middle" alt=""> License
+## <img src="assets/icons/box.svg" width="24" align="absbottom" alt=""> License
 
 Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
