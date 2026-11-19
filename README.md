@@ -111,6 +111,39 @@ chmod +x zokyva
 ln -sf $(pwd)/zokyva ~/.local/bin/zokyva
 ```
 
+### Option D: Windows 10 & 11 (PowerShell)
+Options B and C rely on Unix commands (`chmod`, `ln`, `~/.local/bin`) that do not exist in PowerShell or CMD. On Windows, nothing needs to be installed: ZOKYVA uses the Python standard library only, so you clone the repository and run the script through Python.
+
+```powershell
+# 1. Check Python (3.10 or higher). If `py` is not found, try `python --version`,
+#    or install Python from the Microsoft Store / python.org ("Add python.exe to PATH").
+py --version
+
+# 2. Get the source
+git clone https://github.com/DevRedious/zokyva.git
+cd zokyva
+
+# 3. Run it
+py zokyva --deep --export <BRAND_OR_KEYWORD>
+```
+
+Use `py zokyva` wherever this README shows `zokyva`. When run from inside the cloned folder, reports are written to its `audits\` subfolder.
+
+**Optional: a global `zokyva` command.** Add a function to your PowerShell profile so you can call `zokyva` from any folder:
+
+```powershell
+# Create the profile if it does not exist yet, then open it
+if (!(Test-Path $PROFILE)) { New-Item -ItemType File -Path $PROFILE -Force }
+notepad $PROFILE
+
+# Paste this line into the profile, save, then open a new PowerShell window
+function zokyva { py "$HOME\zokyva\zokyva" @args }
+```
+
+Adjust `$HOME\zokyva` if you cloned the repository elsewhere. Run from another folder, reports are written to `%USERPROFILE%\.local\share\zokyva\audits\`.
+
+**If emojis or box characters crash or display as `?`:** run `$env:PYTHONUTF8=1` in the session before launching ZOKYVA (or add that line to your profile).
+
 ---
 
 <a id="sec-usage-modes-cli"></a>
