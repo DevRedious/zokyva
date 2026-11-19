@@ -175,6 +175,45 @@ AGENT_SKILL_PATHS = {
     "Claude Code / Cursor (~/.claude)": Path.home() / ".claude" / "skills" / "zokyva" / "SKILL.md",
 }
 
+SKILL_SOURCE_URL = "https://raw.githubusercontent.com/DevRedious/zokyva/main/SKILL.md"
+
+
+def load_skill_content() -> tuple[str | None, str]:
+    """Return (content, origin) of SKILL.md, or (None, reason) if unavailable.
+
+    Looks next to the script first (git clone, symlink, bun/npm package), then
+    downloads it from GitHub (standalone curl install ships the script alone).
+    """
+    script_dir = Path(__file__).resolve().parent
+    for candidate in (script_dir / "SKILL.md", script_dir.parent / "SKILL.md"):
+        if candidate.is_file():
+            content = candidate.read_text(encoding="utf-8")
+            if content.strip():
+                return content, str(candidate)
+    try:
+        req = urllib.request.Request(SKILL_SOURCE_URL, headers={"User-Agent": "zokyva"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            content = resp.read().decode("utf-8")
+        if content.strip():
+            return content, SKILL_SOURCE_URL
+        return None, f"empty file at {SKILL_SOURCE_URL}"
+    except (urllib.error.URLError, OSError, UnicodeDecodeError) as exc:
+        return None, f"SKILL.md not found next to {script_dir} and download failed ({exc})"
+
+
+def install_skills() -> bool:
+    """Write SKILL.md for every agent. Never writes an empty file."""
+    content, origin = load_skill_content()
+    if content is None:
+        print(f"{RED}[ERREUR] Skill non installée : {origin}{RESET}")
+        return False
+    for name, path in AGENT_SKILL_PATHS.items():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding="utf-8")
+        print(f"{GREEN}[OK] Skill installée pour {name} ({len(content.encode('utf-8'))} octets){RESET}")
+    print(f"{DIM}Source : {origin}{RESET}")
+    return True
+
 DEFAULT_TLDS = ["com", "fr", "io", "ai", "dev", "app", "tech", "gg", "co", "net", "group", "eu", "org", "so"]
 
 EXTENDED_TLDS = DEFAULT_TLDS + [
@@ -1522,13 +1561,7 @@ def manage_skills_menu():
     print(f"  {CYAN}[0]{RESET} Retour au menu principal")
     choice = input(f"\n{BOLD}Choix : {RESET}").strip()
     if choice == "1":
-        for name, path in AGENT_SKILL_PATHS.items():
-            path.parent.mkdir(parents=True, exist_ok=True)
-            skill_src = Path.home() / "Documents" / "Dev" / "scripts" / "zokyva" / "SKILL.md"
-            content = skill_src.read_text(encoding="utf-8") if skill_src.exists() else ""
-            with open(path, "w", encoding="utf-8") as f:
-                f.write(content)
-            print(f"  {GREEN}[OK] Skill installée pour {name}{RESET}")
+        install_skills()
         input(f"\n{DIM}Appuyez sur Entrée pour continuer...{RESET}")
     elif choice == "2":
         for name, path in AGENT_SKILL_PATHS.items():
@@ -1680,14 +1713,7 @@ def main():
         sys.exit(0)
 
     if args.install_skills:
-        for name, path in AGENT_SKILL_PATHS.items():
-            path.parent.mkdir(parents=True, exist_ok=True)
-            skill_src = Path.home() / "Documents" / "Dev" / "scripts" / "zokyva" / "SKILL.md"
-            content = skill_src.read_text(encoding="utf-8") if skill_src.exists() else ""
-            with open(path, "w", encoding="utf-8") as f:
-                f.write(content)
-            print(f"[OK] Skill Zokyva installée pour : {name}")
-        sys.exit(0)
+        sys.exit(0 if install_skills() else 1)
 
     if not args.keywords and not args.suggest and not args.json:
         if sys.stdin.isatty():
